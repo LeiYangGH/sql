@@ -1,0 +1,21 @@
+sqlcmd -S . -E
+sqlcmd -S 127.0.0.1 -U sa -P L38YangSQL
+sqlcmd -S 192.168.240.141 -U sa -P L38YangSQL
+sqlcmd -S . -U sa -P 'L38YangSQL'
+sqlcmd -S 127.0.0.1 -U sa -P L38YangSQL
+use master
+go
+sp_configure 'remote admin connections', 1 
+GO
+RECONFIGURE
+go
+
+ALTER LOGIN sa ENABLE
+GO
+ALTER LOGIN sa WITH PASSWORD = 'L38YangSQL'
+GO
+
+EXEC sys.sp_configure N'remote access', N'1'
+GO
+RECONFIGURE WITH OVERRIDE
+GO
