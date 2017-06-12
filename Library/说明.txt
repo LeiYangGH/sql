@@ -1,0 +1,2 @@
+1. 新建数据库Library
+2. 执行create_tables.sql
