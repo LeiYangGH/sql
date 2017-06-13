@@ -4,7 +4,7 @@ if not defined msg (echo "msg" not defined ) else (
 git add .
 git commit -m "%msg%"
 echo 'pushing...'
-git push https://github.com/LeiYangGH/CConsole
+git push https://github.com/LeiYangGH/sql
 echo 'end'
 )
 pause
